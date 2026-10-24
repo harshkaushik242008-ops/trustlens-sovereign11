@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TrustLens Sovereign - Cyber Shield",
+  "version": "3.0.0",
+  "description": "Sub-second AI cyber-threat and fraud detection extension powered by Groq Llama 3.3.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.amazon.in/*",
+    "https://*.amazon.com/*",
+    "https://*.flipkart.com/*",
+    "http://localhost:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.amazon.in/*",
+        "https://*.amazon.com/*",
+        "https://*.flipkart.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
